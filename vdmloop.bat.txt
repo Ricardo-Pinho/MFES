@@ -1,0 +1,19 @@
+@echo off
+rem Runs a collection of VDM++ test examples
+rem Assumes specification is in Word RTF files
+
+set S1=Lifeline.rtf
+set S2=Actor.rtf
+set S3=Object.rtf
+set S4=Fragment.rtf
+set S5=Message.rtf
+set S6=Gate.rtf
+set S7=Diagram.rtf
+set S8=Test.rtf
+set S9=LifelineTest.rtf
+set S10=ActorObjectTest.rtf
+set S11=FragmentsTest.rtf
+
+
+"C:\Program Files (x86)\The VDM++ Toolbox Lite v8.3.1\bin\vppde" -p -R vdm.tc %S1% %S2% %S3% %S4% %S5% %S6% %S7% %S8% %S9% %S10% %S11%
+for /R %%f in (*.arg) do call vdmtest "%%f"
